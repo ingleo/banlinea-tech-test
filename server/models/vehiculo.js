@@ -16,6 +16,10 @@ let vehiculoSchema = new Schema({
     fecha_soat: {
         type: Date,
         required: [true, 'Es necesario ingresar una fecha soat']
+    },
+    estado: {
+        type: String,
+        default: true
     }
 });
 

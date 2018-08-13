@@ -11,6 +11,13 @@ const app = express();
 // parse application/json
 app.use(bodyParser.json());
 
+// habilitación de cors
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
+
 //definición de variables de rutas
 app.use(require('./routes/index'));
 

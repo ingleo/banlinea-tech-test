@@ -21,6 +21,10 @@ let conductorSchema = new Schema({
         unique: true,
         required: [true, 'El necesario número de documento']
     },
+    estado: {
+        type: String,
+        default: true
+    }
 }, { collection: 'conductores' });
 
 conductorSchema.plugin(uniqueValidator, { message: '{PATH} debe ser único' });
