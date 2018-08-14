@@ -18,6 +18,10 @@ app.use(function(req, res, next) {
     next();
 });
 
+//habilitar la carpeta public
+app.use('/', express.static(path.resolve(__dirname, '../public')));
+app.use('/conductores', express.static(path.join(__dirname, '../public')));
+
 //definición de variables de rutas
 app.use(require('./routes/index'));
 
